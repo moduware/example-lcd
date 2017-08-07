@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.example-lcd",
+  "name": "LCD Example",
+  "description": "Tile for lcd example",
+
+  "version": "1.0.0",
+  "changes": "Initial release",
+  "minumumAppVersion": "1.0.5",
+  "modules": [
+    "nexpaq.module.devmod"
+  ],
+  
+  "title": "LCD Screen",
+  "color": "black",
+  "textColor": "white"
+}

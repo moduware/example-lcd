@@ -1,0 +1,18 @@
+{
+    "type": "nexpaq.module.devmod",
+    "version": "1.0.0",
+    "commands": [
+        {
+            "name": "SetLine1",
+            "title": "Set Line One Text",
+            "description": "Configures text of line one with array of ASCII character codes",
+            "command": "2700"
+        },
+        {
+            "name": "SetLine2",
+            "title": "Set Line Two Text",
+            "description": "Configures text of line one with array of ASCII character codes",
+            "command": "2702"
+        }
+    ]
+}
