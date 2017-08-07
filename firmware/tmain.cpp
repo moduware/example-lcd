@@ -27,36 +27,11 @@ void np_api_setup() {
 
 	// If the command number is out of the range 0x2700 - 0x27ff, a FAIL message is displayed
 	// Handle the fail event here!
-	if ( np_api_register((MDK_REGISTER_CMD*)my_cmd_func_table, length) == MDK_REGISTER_FAIL ) { //communication check
-	}
+	//if ( np_api_register((MDK_REGISTER_CMD*)my_cmd_func_table, length) == MDK_REGISTER_FAIL ) { //communication check
+	//}
 
 	//Initialization the LCD functions
 	LCD_Init();
-	// Set the first line, fifth column
-	LCD_SetCursor(5, 0);
-	// Print string value
-	LCD_Write_String("NEXPAQ");
-	delay(150);
-	LCD_SetCursor(4, 0);
-	LCD_Write_String("<NEXPAQ>");
-	delay(150);
-	LCD_SetCursor(3, 0);
-	LCD_Write_String("<<NEXPAQ>>");
-	delay(150);
-	LCD_SetCursor(2, 0);
-	LCD_Write_String("<<<NEXPAQ>>>");
-	delay(150);
-	LCD_SetCursor(1, 0);
-	LCD_Write_String("<<<<NEXPAQ>>>>");
-	delay(150);
-	LCD_SetCursor(0, 0);
-	// Set the second line, first column
-	LCD_Write_String("<<<<<NEXPAQ>>>>>");
-	LCD_SetCursor(3, 1);
-	// Print string value
-	LCD_Write_String("#GoModular");
-	// Set the second line, first column
-	delay(1000);
 
 	// After setting this command, np_api_loop() will run just once
 	np_api_pm_automode_set();
@@ -65,6 +40,32 @@ void np_api_setup() {
 
 void np_api_loop() {
 	// This loop will run continuously while the MCU is not in sleep mode or has a stop condition
+
+    // Set the first line, fifth column
+    LCD_SetCursor(5, 0);
+    // Print string value
+    LCD_Write_String("NEXPAQ");
+    delay(150);
+    LCD_SetCursor(4, 0);
+    LCD_Write_String("<NEXPAQ>");
+    delay(150);
+    LCD_SetCursor(3, 0);
+    LCD_Write_String("<<NEXPAQ>>");
+    delay(150);
+    LCD_SetCursor(2, 0);
+    LCD_Write_String("<<<NEXPAQ>>>");
+    delay(150);
+    LCD_SetCursor(1, 0);
+    LCD_Write_String("<<<<NEXPAQ>>>>");
+    delay(150);
+    LCD_SetCursor(0, 0);
+    // Set the second line, first column
+    LCD_Write_String("<<<<<NEXPAQ>>>>>");
+    LCD_SetCursor(3, 1);
+    // Print string value
+    LCD_Write_String("#GoModular");
+    // Set the second line, first column
+    delay(1000);
 
 	/*SEND command -- use 0x2800
 	*np_api_upload(0x2800, "I am sensor value!", 2) -- sensor value is unsigned char
