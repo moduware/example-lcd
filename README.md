@@ -1,2 +1,2 @@
 # example-lcd
-Example with LCD display
+Example with LCD display.
